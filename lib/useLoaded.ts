@@ -1,5 +1,5 @@
-import { ref, watchEffect } from 'vue'
-import type { UnwrapNestedRefs, ImgHTMLAttributes } from 'vue'
+import { ref, watchEffect } from 'vue-demi'
+import type { UnwrapNestedRefs, ImgHTMLAttributes } from 'vue-demi'
 
 export type UseLoadedOptions = ImgHTMLAttributes & { referrerpolicy?: string }
 

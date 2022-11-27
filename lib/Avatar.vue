@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive } from 'vue-demi'
 import useLoaded from './useLoaded'
 import type { UseLoadedOptions } from './useLoaded'
 import { stringAvatar } from './utils'
