@@ -54,8 +54,13 @@ const name = ref('Foo Bar')
 
 ## Thanks
 
-- [react-avatar](https://github.com/ambassify/react-avatar) Thanks for the inspiration.
-- <https://mui.com/material-ui/react-avatar/> Thanks to some examples provided in MUI.
+- [react-avatar](https://github.com/ambassify/react-avatar)
+
+  Thanks for the inspiration.
+
+- <https://mui.com/material-ui/react-avatar/>
+
+  Thanks to some examples provided in MUI.
 
 ## License
 
