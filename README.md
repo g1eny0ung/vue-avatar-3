@@ -28,13 +28,34 @@ import { ref } from 'vue'
 import Avatar from 'vue-avatar-3'
 
 const src = ref('https://fakeimg.pl/300/')
-const name = ref('Yue Yang')
+const name = ref('Foo Bar')
 </script>
 
 <template>
   <Avatar :src="src" :name="name" />
 </template>
 ```
+
+## Options
+
+| Name       | Type                              | Default    | Description                                                                                                                                                |
+| ---------- | --------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src`      | `string`                          |            | The image source.                                                                                                                                          |
+| `alt`      | `string`                          |            | The image alt.                                                                                                                                             |
+| `srcSet`   | `string`                          |            | The image srcSet.                                                                                                                                          |
+| `sizes`    | `string`                          |            | The image sizes.                                                                                                                                           |
+| `imgProps` | `object`                          |            | The image attributes that will be applied to the image. This option will **override above options**.                                                       |
+| `name`     | `string`                          |            | Specify a name to generate a letter avatar. This option will only take effect if the image is not loaded successfully and the `fallback` option is `true`. |
+| `bgColor`  | `string`                          |            | Specify a background color for the letter avatar.                                                                                                          |
+| `size`     | `string` / `number`               | `40px`     | The size of the avatar. You can use a number or a string with a unit.                                                                                      |
+| `variant`  | `circular` / `rounded` / `square` | `circular` | The variant of the avatar.                                                                                                                                 |
+| `round`    | `string` / `number`               | `8px`      | The radius of the avatar. Take effect when `variant` is `rounded`. You can use a number or a string with a unit.                                           |
+| `fallback` | `boolean`                         | `true`     | Whether to show the letter avatar when the image is not loaded successfully.                                                                               |
+
+## Thanks
+
+- [react-avatar](https://github.com/ambassify/react-avatar) Thanks for the inspiration.
+- <https://mui.com/material-ui/react-avatar/> Thanks to some examples provided in MUI.
 
 ## License
 
