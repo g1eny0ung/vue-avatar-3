@@ -19,7 +19,7 @@
     "dts": "vue-tsc --declaration --declarationDir dist --emitDeclarationOnly",
     "build+dts": "npm run build && npm run dts",
     "prepare": "is-ci || husky install",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build+dts"
   },
   "keywords": [
     "vue",
