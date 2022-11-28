@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue-demi'
+import { withDefaults, defineProps, computed } from 'vue-demi'
+import type { ImageOptions } from './types'
 import useLoaded from './useLoaded'
-import type { UseLoadedOptions } from './useLoaded'
 import { stringAvatar } from './utils'
 
 const props = withDefaults(
   defineProps<{
-    srcSet?: UseLoadedOptions['srcset']
-    sizes?: UseLoadedOptions['sizes']
-    src?: UseLoadedOptions['src']
-    alt?: UseLoadedOptions['alt']
-    imgProps?: UseLoadedOptions
+    srcSet?: ImageOptions['srcset']
+    sizes?: ImageOptions['sizes']
+    src?: ImageOptions['src']
+    alt?: ImageOptions['alt']
+    imgProps?: ImageOptions
     name?: string
+    bgColor?: string
     size?: string | number
     variant?: 'circular' | 'rounded' | 'square'
     round?: string | number
@@ -23,16 +24,16 @@ const props = withDefaults(
   }
 )
 
-const useLoadedOptions = reactive({
+const useLoadedOptions = computed(() => ({
   crossorigin: props.imgProps?.crossorigin,
   referrerpolicy: props.imgProps?.referrerpolicy,
   src: props.src || props.imgProps?.src,
   srcset: props.srcSet || props.imgProps?.srcset,
-})
-const loaded = useLoaded(useLoadedOptions)
+}))
 
+const { loading, loaded } = useLoaded(useLoadedOptions)
 const showStringAvatar = computed(
-  () => !loaded.value && props.fallback && props.name
+  () => !loading.value && !loaded.value && props.fallback && props.name
 )
 
 const defaultSize = '40px'
@@ -58,9 +59,11 @@ const stringAvatarComputed = computed(() =>
       flexShrink: 0,
       width: size,
       height: size,
-      backgroundColor: showStringAvatar
-        ? stringAvatarComputed && stringAvatarComputed.backgroundColor
-        : undefined,
+      backgroundColor:
+        bgColor ||
+        (showStringAvatar
+          ? stringAvatarComputed && stringAvatarComputed.backgroundColor
+          : undefined),
       borderRadius:
         variant === 'circular'
           ? '50%'

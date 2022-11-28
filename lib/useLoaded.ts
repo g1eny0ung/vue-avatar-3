@@ -1,18 +1,20 @@
 import { ref, watchEffect } from 'vue-demi'
-import type { UnwrapNestedRefs, ImgHTMLAttributes } from 'vue-demi'
+import type { Ref } from 'vue-demi'
+import type { ImageOptions } from './types'
 
-export type UseLoadedOptions = ImgHTMLAttributes & { referrerpolicy?: string }
-
-function useLoaded(options: UnwrapNestedRefs<UseLoadedOptions>) {
+function useLoaded(options: Ref<ImageOptions>) {
+  const loading = ref(true)
   const loaded = ref(false)
 
-  function loadImage(options: UnwrapNestedRefs<UseLoadedOptions>) {
+  function loadImage(options: ImageOptions) {
     const { crossorigin, referrerpolicy, src, srcset } = options
 
     if (!src && !srcset) {
       return
     }
 
+    // Reset states.
+    loading.value = true
     loaded.value = false
 
     let active = true
@@ -23,6 +25,7 @@ function useLoaded(options: UnwrapNestedRefs<UseLoadedOptions>) {
       }
 
       loaded.value = true
+      loading.value = false
     }
     image.onerror = () => {
       if (!active) {
@@ -30,6 +33,7 @@ function useLoaded(options: UnwrapNestedRefs<UseLoadedOptions>) {
       }
 
       loaded.value = false
+      loading.value = false
     }
 
     if (crossorigin) {
@@ -38,23 +42,27 @@ function useLoaded(options: UnwrapNestedRefs<UseLoadedOptions>) {
     if (referrerpolicy) {
       image.referrerPolicy = referrerpolicy
     }
-    image.src = src ?? ''
+    if (src) {
+      image.src = src
+    }
     if (srcset) {
       image.srcset = srcset
     }
 
-    return active
+    return () => {
+      active = false
+    }
   }
 
   watchEffect((onCleanup) => {
-    let active = loadImage(options)
+    const cancel = loadImage(options.value)
 
     onCleanup(() => {
-      active = false
+      typeof cancel === 'function' && cancel()
     })
   })
 
-  return loaded
+  return { loading, loaded }
 }
 
 export default useLoaded
