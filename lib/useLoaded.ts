@@ -10,6 +10,8 @@ function useLoaded(options: Ref<ImageOptions>) {
     const { crossorigin, referrerpolicy, src, srcset } = options
 
     if (!src && !srcset) {
+      loading.value = false
+
       return
     }
 
