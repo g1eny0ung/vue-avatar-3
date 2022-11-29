@@ -1,0 +1,28 @@
+// Vitest Snapshot v1
+
+exports[`Avatar > if the image is not loaded, it should render a letter avatar 1`] = `
+<div>
+  <div
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #a55c80; border-radius: 50%; user-select: none;"
+  >
+    
+    JD
+    
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Avatar > renders a image correctly 1`] = `
+<div>
+  <div
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; user-select: none;"
+  >
+    <!--v-if-->
+    <img
+      src="https://fakeimg.pl/300/"
+      style="position: absolute; width: 100%; height: 100%; color: transparent;"
+    />
+  </div>
+</div>
+`;

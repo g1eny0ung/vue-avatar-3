@@ -35,6 +35,9 @@ const { loading, loaded } = useLoaded(useLoadedOptions)
 const showStringAvatar = computed(
   () => !loading.value && !loaded.value && props.fallback && props.name
 )
+const stringAvatarComputed = computed(() =>
+  props.name ? stringAvatar(props.name) : undefined
+)
 
 const defaultSize = '40px'
 const size = computed(() =>
@@ -43,9 +46,6 @@ const size = computed(() =>
       ? props.size
       : `${props.size}px`
     : defaultSize
-)
-const stringAvatarComputed = computed(() =>
-  props.name ? stringAvatar(props.name) : undefined
 )
 </script>
 

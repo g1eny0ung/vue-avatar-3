@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -25,5 +26,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['vue-demi'],
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    setupFiles: 'lib/setupTests.ts',
   },
 })
