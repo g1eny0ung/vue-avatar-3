@@ -1,5 +1,7 @@
 # vue-avatar-3
 
+[![CI](https://github.com/g1eny0ung/vue-avatar-3/actions/workflows/ci.yaml/badge.svg)](https://github.com/g1eny0ung/vue-avatar-3/actions/workflows/ci.yaml)
+
 A useful avatar component for Vue 2&3, with support for letter avatars. Inspired by [react-avatar](https://github.com/ambassify/react-avatar).
 
 ## Installation
