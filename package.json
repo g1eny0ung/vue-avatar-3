@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "dts": "vue-tsc --declaration --declarationDir dist --emitDeclarationOnly",
+    "dts": "vue-tsc --project tsconfig.build.json",
     "build+dts": "npm run build && npm run dts",
     "test": "vitest",
     "prepare": "is-ci || husky install",
