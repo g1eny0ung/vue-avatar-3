@@ -18,10 +18,17 @@ function stringToColor(string: string) {
 }
 
 export function stringAvatar(name: string) {
-  const splitted = name.split(' ')
+  const [first, second] = name.split(' ')
+  let children
+
+  if (second) {
+    children = `${first[0]}${second[0]}`
+  } else {
+    children = first[0]
+  }
 
   return {
     backgroundColor: stringToColor(name),
-    children: `${splitted[0][0]}${splitted[1][0]}`,
+    children,
   }
 }
