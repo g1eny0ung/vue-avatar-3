@@ -1,6 +1,6 @@
 {
   "name": "vue-avatar-3",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A useful avatar component for Vue 2&3, with support for letter avatars.",
   "files": [
     "dist"
