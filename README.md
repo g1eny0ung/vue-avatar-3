@@ -39,6 +39,11 @@ const name = ref('Foo Bar')
 </template>
 ```
 
+The priority of displaying avatars is as follows:
+
+1. If `src` is set, then `src` will have the highest priority.
+2. If `src` is not set or the load fails, then the `name` will be used to generate a letter avatar.
+
 ## Options
 
 | Name       | Type                              | Default    | Description                                                                                                                                                |
