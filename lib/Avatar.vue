@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { withDefaults, defineProps, computed } from 'vue-demi'
+import { computed } from 'vue-demi'
 import type { ImageOptions } from './types'
 import useLoaded from './useLoaded'
 import { stringAvatar } from './utils'
