@@ -60,15 +60,12 @@ The priority of displaying avatars is as follows:
 | `round`    | `string` / `number`               | `8px`      | The radius of the avatar. Take effect when `variant` is `rounded`. You can use a number or a string with a unit.                                           |
 | `fallback` | `boolean`                         | `true`     | Whether to show the letter avatar when the image is not loaded successfully.                                                                               |
 
-## Thanks
+## Credits
+
+This project is inspired by the following projects:
 
 - [react-avatar](https://github.com/ambassify/react-avatar)
-
-  Thanks for the inspiration.
-
 - <https://mui.com/material-ui/react-avatar/>
-
-  Thanks to some examples provided in MUI.
 
 ## License
 
