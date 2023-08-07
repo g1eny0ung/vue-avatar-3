@@ -77,6 +77,7 @@ const size = computed(() =>
               : `${round}px`
             : '8px'
           : undefined,
+      overflow: 'hidden',
       userSelect: 'none',
     }"
   >

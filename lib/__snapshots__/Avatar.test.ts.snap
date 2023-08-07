@@ -3,7 +3,7 @@
 exports[`Avatar > if bgColor is provided, it should render a letter avatar with the provided background color 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #ffffff; color: #000; border-radius: 50%; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #ffffff; color: #000; border-radius: 50%; overflow: hidden; user-select: none;"
   >
     
     JD
@@ -16,7 +16,7 @@ exports[`Avatar > if bgColor is provided, it should render a letter avatar with 
 exports[`Avatar > if only the name is provided, it should render a letter avatar 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #a55c80; color: #fff; border-radius: 50%; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #a55c80; color: #fff; border-radius: 50%; overflow: hidden; user-select: none;"
   >
     
     JD
@@ -29,7 +29,7 @@ exports[`Avatar > if only the name is provided, it should render a letter avatar
 exports[`Avatar > if the image is not loaded, it should render a letter avatar 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #a55c80; color: #fff; border-radius: 50%; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; background-color: #a55c80; color: #fff; border-radius: 50%; overflow: hidden; user-select: none;"
   >
     
     JD
@@ -42,7 +42,7 @@ exports[`Avatar > if the image is not loaded, it should render a letter avatar 1
 exports[`Avatar > renders a image correctly 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; user-select: none;"
   >
     <!--v-if-->
     <img
@@ -56,7 +56,7 @@ exports[`Avatar > renders a image correctly 1`] = `
 exports[`Avatar > variant: rounded + round 4px 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 4px; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 4px; overflow: hidden; user-select: none;"
   >
     <!--v-if-->
     <img
@@ -70,7 +70,7 @@ exports[`Avatar > variant: rounded + round 4px 1`] = `
 exports[`Avatar > variant: rounded 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 8px; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 8px; overflow: hidden; user-select: none;"
   >
     <!--v-if-->
     <img
@@ -84,7 +84,7 @@ exports[`Avatar > variant: rounded 1`] = `
 exports[`Avatar > variant: square 1`] = `
 <div>
   <div
-    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; user-select: none;"
+    style="position: relative; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; height: 40px; overflow: hidden; user-select: none;"
   >
     <!--v-if-->
     <img
