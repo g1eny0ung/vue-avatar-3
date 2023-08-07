@@ -5,6 +5,8 @@
 
 A useful avatar component for Vue 2&3, with support for letter avatars. Inspired by [react-avatar](https://github.com/ambassify/react-avatar).
 
+Live demo: <https://stackblitz.com/edit/vue-avatar-3>.
+
 ## Installation
 
 ```bash
