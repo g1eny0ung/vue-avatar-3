@@ -2,7 +2,7 @@
 import { computed } from 'vue-demi'
 import type { ImageOptions } from './types'
 import useLoaded from './useLoaded'
-import { stringAvatar } from './utils'
+import { stringAvatar, pickTextColorBasedOnBgColorSimple } from './utils'
 
 const props = withDefaults(
   defineProps<{
@@ -61,9 +61,12 @@ const size = computed(() =>
       height: size,
       backgroundColor:
         bgColor ||
-        (showStringAvatar
-          ? stringAvatarComputed && stringAvatarComputed.backgroundColor
-          : undefined),
+        (showStringAvatar ? stringAvatarComputed?.bgColor : undefined),
+      color: bgColor
+        ? pickTextColorBasedOnBgColorSimple(bgColor)
+        : showStringAvatar
+        ? stringAvatarComputed?.textColor
+        : undefined,
       borderRadius:
         variant === 'circular'
           ? '50%'

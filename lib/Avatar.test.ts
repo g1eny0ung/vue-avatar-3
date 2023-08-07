@@ -40,6 +40,7 @@ describe('Avatar', () => {
 
     expect(container).toMatchSnapshot()
     expect(getByText('JD')).toBeInTheDocument()
+    expect(getByText('JD')).toHaveStyle('color: #fff')
   })
 
   it('if only the name is provided, it should render a letter avatar', () => {
@@ -69,12 +70,13 @@ describe('Avatar', () => {
     const { container, getByText } = render(Avatar, {
       props: {
         name: 'John Doe',
-        bgColor: 'red',
+        bgColor: '#ffffff',
       },
     })
 
     expect(container).toMatchSnapshot()
-    expect(getByText('JD')).toHaveStyle('background-color: red')
+    expect(getByText('JD')).toHaveStyle('background-color: #ffffff')
+    expect(getByText('JD')).toHaveStyle('color: #000')
   })
 
   it('variant: rounded', () => {
