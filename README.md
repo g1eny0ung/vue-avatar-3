@@ -42,7 +42,7 @@ const name = ref('Foo Bar')
 The priority of displaying avatars is as follows:
 
 1. If `src` is set, then `src` will have the highest priority.
-2. If `src` is not set or the load fails, then the `name` will be used to generate a letter avatar (You can use `fallback` to control this behavior).
+2. If `src` is not set or the load fails, then the `name` will be used to generate a letter avatar (you can use `fallback` to control this behavior).
 
 ## Options
 
@@ -54,7 +54,7 @@ The priority of displaying avatars is as follows:
 | `sizes`    | `string`                          |            | The image sizes.                                                                                                                                           |
 | `imgProps` | `object`                          |            | The image attributes that will be applied to the image. This option will **override above options**.                                                       |
 | `name`     | `string`                          |            | Specify a name to generate a letter avatar. This option will only take effect if the image is not loaded successfully and the `fallback` option is `true`. |
-| `bgColor`  | `string`                          |            | Specify a background color for the letter avatar (must be a 6-value hex color).                                                                            |
+| `bgColor`  | `string`                          |            | Specify a background color for the letter avatar (must be a 6-value hex color, this is to automatically determine the text color).                         |
 | `size`     | `string` / `number`               | `40px`     | The size of the avatar. You can use a number or a string with a unit.                                                                                      |
 | `variant`  | `circular` / `rounded` / `square` | `circular` | The variant of the avatar.                                                                                                                                 |
 | `round`    | `string` / `number`               | `8px`      | The radius of the avatar. Take effect when `variant` is `rounded`. You can use a number or a string with a unit.                                           |
