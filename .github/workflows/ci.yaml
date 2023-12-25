@@ -7,6 +7,7 @@ on:
   push:
     branches: ['main']
     paths:
+      - .github/workflows/ci.yaml
       - '*.vue'
       - '**.ts'
       - pnpm-lock.yaml
@@ -14,6 +15,7 @@ on:
   pull_request:
     branches: ['main']
     paths:
+      - .github/workflows/ci.yaml
       - '*.vue'
       - '**.ts'
       - pnpm-lock.yaml
