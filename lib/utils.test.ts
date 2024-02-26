@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { stringAvatar } from './utils'
 
 describe('utils', () => {

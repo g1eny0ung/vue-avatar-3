@@ -38,7 +38,7 @@ jobs:
         uses: g1eny0ung/detect-nodejs-package-manager-action@v1
         with:
           env-name: pm
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
       - name: Use Node.js ${{ matrix.node-version }}

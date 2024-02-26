@@ -1,3 +1,4 @@
+import { describe, it, expect, vi } from 'vitest'
 import { ref } from 'vue'
 import { render } from '@testing-library/vue'
 import useLoaded from './useLoaded'
